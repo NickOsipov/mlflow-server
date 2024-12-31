@@ -38,8 +38,21 @@ MYSQL_ROOT_PASSWORD=mysql
 
 3. Запустите сервер:
 
+Через make:
 ```bash
 make up
+```
+
+Через invoke:
+```bash
+# Создать виртуальное окружение
+python3 -m venv .venv
+# Активировать виртуальное окружение
+source .venv/bin/activate
+# Установить зависимости
+pip install -r requirements.txt
+# Запустить сервисы
+invoke up
 ```
 
 MLflow UI будет доступен по адресу: http://localhost:5000
